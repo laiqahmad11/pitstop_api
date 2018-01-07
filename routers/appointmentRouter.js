@@ -56,6 +56,9 @@ appointmentRouter.route('/appointments/:AppointmentId')
           res.send(appointment);
         });
       }
+      else {
+          res.json({result: "Data not found"});
+      }
     });
 })
 .delete((req, res, next) => {
@@ -64,10 +67,8 @@ appointmentRouter.route('/appointments/:AppointmentId')
     id: req.params.AppointmentId
   }
   }).then(function(appointment) {
-      res.json(appointment);
+      res.json({result: ""+appointment});
   });
 });
-
-
 
 module.exports = appointmentRouter;
