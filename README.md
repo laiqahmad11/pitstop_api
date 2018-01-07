@@ -30,4 +30,4 @@ Appointments.belongsTo(models.Car);
 6) Run Migration:
 node_modules/.bin/sequelize db:migrate
 
-7) npm run
+7) run : npm start
